@@ -1,6 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
 
     <ImageView
         android:id="@+id/ivImageSlide"
@@ -8,19 +9,5 @@
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:src="@drawable/maldivespage4"/>
-
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_alignParentBottom="true"
-        android:fontFamily="sans-serif-medium"
-        android:gravity="start"
-        android:text="Maldives"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"/>
 </RelativeLayout>
 

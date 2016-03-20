@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     /* Animation object */
     private Animation mScaleCircleAnim;
+    private Animation mCityAnim;
 
     /* Keeps track of the page position when swiping right and left */
     private int mPreviousPosition;
@@ -80,6 +81,9 @@ public class MainActivity extends AppCompatActivity {
         scaleAnim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.scaledown_circle);
         mIvCircle4.startAnimation(scaleAnim);
 
+        mTvCity = (TextView)findViewById(R.id.tvCity);
+        mCityAnim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_disappear);
+
         /* Listen for the swiping events */
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -115,6 +119,10 @@ public class MainActivity extends AppCompatActivity {
 
                             scaleAnim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.scaledown_circle);
                             mIvCircle1.startAnimation(scaleAnim);
+
+                            mTvCity.setText("HallStatt");
+                            final Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_appear);
+                            mTvCity.startAnimation(animation);
                         }
                         break;
 
@@ -138,6 +146,10 @@ public class MainActivity extends AppCompatActivity {
 
                             scaleAnim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.scaledown_circle);
                             mIvCircle2.startAnimation(scaleAnim);
+
+                            mTvCity.setText("HallStatt");
+                            final Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_appear);
+                            mTvCity.startAnimation(animation);
                         }
                         break;
 
@@ -161,6 +173,10 @@ public class MainActivity extends AppCompatActivity {
 
                             scaleAnim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.scaledown_circle);
                             mIvCircle3.startAnimation(scaleAnim);
+
+                            mTvCity.setText("HallStatt");
+                            final Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_appear);
+                            mTvCity.startAnimation(animation);
                         }
                         break;
 
@@ -184,6 +200,10 @@ public class MainActivity extends AppCompatActivity {
 
                             scaleAnim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.scaledown_circle);
                             mIvCircle4.startAnimation(scaleAnim);
+
+                            mTvCity.setText("Taiwan");
+                            final Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_appear);
+                            mTvCity.startAnimation(animation);
                         }
                         break;
 
@@ -199,7 +219,7 @@ public class MainActivity extends AppCompatActivity {
                             mScaleCircleAnim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.scaleup_circle);
                             mIvCircle4.startAnimation(mScaleCircleAnim);
 
-                            mTvCity.setText("Sentorini");
+                            mTvCity.setText(R.string.sentorini);
                             final Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_appear);
                             mTvCity.startAnimation(animation);
                         }
