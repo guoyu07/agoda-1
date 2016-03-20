@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvCheckDate"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="4dp"
+        android:layout_marginEnd="4dp"
+        android:text="20"
+        android:textSize="50sp"
+        android:textColor="@color/searchText"
+        android:gravity="center_vertical"
+        android:fontFamily="sans-serif-light"/>
+
+    <TextView
+        android:id="@+id/tvCheckoutMonth"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@id/tvCheckDate"
+        android:layout_toEndOf="@id/tvCheckDate"
+        android:layout_alignTop="@id/tvCheckDate"
+        android:gravity="top"
+        android:textSize="18sp"
+        android:text="Mar"
+        android:textColor="@android:color/black"
+        android:fontFamily="sans-serif-condensed"/>
+
+    <TextView
+        android:id="@+id/tvCheckoutDay"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:layout_toRightOf="@id/tvCheckDate"
+        android:layout_toEndOf="@id/tvCheckDate"
+        android:layout_below="@id/tvCheckoutMonth"
+        android:layout_alignBottom="@id/tvCheckDate"
+        android:gravity="bottom"
+        android:textSize="18sp"
+        android:text="Sun"
+        android:fontFamily="sans-serif-condensed"/>
+
+</RelativeLayout>

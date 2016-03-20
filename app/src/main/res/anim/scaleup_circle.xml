@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+     android:duration="500"
+     android:fillAfter="true"
+     android:fillEnabled="true"
+     android:interpolator="@android:anim/decelerate_interpolator">
+
+    <!-- from scale we want to start from the original size 1.0 -->
+    <!-- to scale we want to increase by 0.5 to 1.5 of its original size -->
+    <scale
+        android:fromXScale="1.0"
+        android:fromYScale="1.0"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:toXScale="1.5"
+        android:toYScale="1.5">
+    </scale>
+
+    <!-- from start with 0.4 transparency -->
+    <!-- to full color -->
+    <alpha
+        android:fromAlpha="0.4"
+        android:toAlpha="1.0">
+    </alpha>
+</set>
+
+
+

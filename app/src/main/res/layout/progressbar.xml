@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:paddingStart="8dp"
+    android:paddingLeft="8dp"
+    android:gravity="start">
+
+    <ImageView
+        android:id="@+id/circle0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/circle_enabled"/>
+
+    <Space
+        android:layout_width="10dp"
+        android:layout_height="10dp"/>
+
+    <ImageView
+        android:id="@+id/circle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/circle_enabled"/>
+
+    <Space
+        android:layout_width="10dp"
+        android:layout_height="10dp"/>
+
+    <ImageView
+        android:id="@+id/circle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/circle_enabled"/>
+
+    <Space
+        android:layout_width="10dp"
+        android:layout_height="10dp"/>
+
+    <ImageView
+        android:id="@+id/circle3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/circle_enabled"/>
+
+    <Space
+        android:layout_width="10dp"
+        android:layout_height="10dp"/>
+
+    <ImageView
+        android:id="@+id/circle4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/circle_enabled"/>
+
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    app:columnCount="3"
+    app:rowCount="2"
+    android:background="@drawable/search_box">
+
+    <!-- Row 1 -->
+    <TextView
+        android:text="Check-in"
+        app:layout_columnWeight="1"
+        app:layout_gravity="center"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-light"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="80dp"
+        android:background="@android:color/holo_blue_dark"
+        app:layout_rowSpan="2" />
+
+    <TextView
+        android:text="Check-out"
+        app:layout_columnWeight="1"
+        app:layout_gravity="center"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-light"/>
+
+    <!-- Row 2 -->
+    <include
+        app:layout_columnWeight="1"
+        app:layout_gravity="center"
+        layout="@layout/checkindate" />
+
+    <include
+        app:layout_columnWeight="1"
+        app:layout_gravity="center"
+        layout="@layout/checkindate" />
+
+</android.support.v7.widget.GridLayout>
