@@ -91,6 +91,15 @@ public class MainActivity extends AppCompatActivity {
                 /* Ignore */
             }
 
+/*
+            mFragmentList.add(new SantoriniFragment());
+            mFragmentList.add(new MaldivesFragment());
+            mFragmentList.add(new HallstattFragment());
+            mFragmentList.add(new TaiwanFragment());
+            mFragmentList.add(new BaliFragment());
+*/
+
+
             /*
                We need to establish if we are moving to the right or the left so we can scale down and up on the
                correct circles. We do this by keeping track of the position to see if it greater or less then the
@@ -111,6 +120,11 @@ public class MainActivity extends AppCompatActivity {
                             Log.d(TAG, "MoveRight");
                             Animation scaleAnim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.scaledown_circle);
                             mIvCircle0.startAnimation(scaleAnim);
+
+                            mTvCity.setText("Maldivies");
+                            final Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_appear);
+                            mTvCity.startAnimation(animation);
+
                         }
                         else {
                             Log.d(TAG, "MoveLeft");
@@ -120,9 +134,9 @@ public class MainActivity extends AppCompatActivity {
                             scaleAnim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.scaledown_circle);
                             mIvCircle1.startAnimation(scaleAnim);
 
-                            mTvCity.setText("HallStatt");
                             final Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_appear);
                             mTvCity.startAnimation(animation);
+                            mTvCity.setText("Santorini");
                         }
                         break;
 
@@ -134,6 +148,13 @@ public class MainActivity extends AppCompatActivity {
 
                             scaleAnim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.scaleup_circle);
                             mIvCircle1.startAnimation(scaleAnim);
+
+                            Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_disappear);
+                            mTvCity.startAnimation(animation);
+
+                            animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_appear);
+                            mTvCity.startAnimation(animation);
+                            mTvCity.setText("Maldives");
                         }
                         else {
                             Log.d(TAG, "moveLeft");
@@ -147,9 +168,9 @@ public class MainActivity extends AppCompatActivity {
                             scaleAnim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.scaledown_circle);
                             mIvCircle2.startAnimation(scaleAnim);
 
-                            mTvCity.setText("HallStatt");
                             final Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_appear);
                             mTvCity.startAnimation(animation);
+                            mTvCity.setText("Maldives");
                         }
                         break;
 
@@ -161,6 +182,10 @@ public class MainActivity extends AppCompatActivity {
 
                             scaleAnim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.scaleup_circle);
                             mIvCircle2.startAnimation(scaleAnim);
+
+                            final Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_appear);
+                            mTvCity.startAnimation(animation);
+                            mTvCity.setText("Hallstatt");
                         }
                         else {
                             Log.d(TAG, "moveLeft");
@@ -174,9 +199,9 @@ public class MainActivity extends AppCompatActivity {
                             scaleAnim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.scaledown_circle);
                             mIvCircle3.startAnimation(scaleAnim);
 
-                            mTvCity.setText("HallStatt");
                             final Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_appear);
                             mTvCity.startAnimation(animation);
+                            mTvCity.setText("HallStatt");
                         }
                         break;
 
@@ -188,6 +213,10 @@ public class MainActivity extends AppCompatActivity {
 
                             scaleAnim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.scaleup_circle);
                             mIvCircle3.startAnimation(scaleAnim);
+
+                            final Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_appear);
+                            mTvCity.startAnimation(animation);
+                            mTvCity.setText("Taiwan");
                         }
                         else {
                             Log.d(TAG, "moveLeft");
@@ -201,9 +230,9 @@ public class MainActivity extends AppCompatActivity {
                             scaleAnim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.scaledown_circle);
                             mIvCircle4.startAnimation(scaleAnim);
 
-                            mTvCity.setText("Taiwan");
                             final Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_appear);
                             mTvCity.startAnimation(animation);
+                            mTvCity.setText("Taiwan");
                         }
                         break;
 
@@ -219,9 +248,9 @@ public class MainActivity extends AppCompatActivity {
                             mScaleCircleAnim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.scaleup_circle);
                             mIvCircle4.startAnimation(mScaleCircleAnim);
 
-                            mTvCity.setText(R.string.sentorini);
                             final Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_appear);
                             mTvCity.startAnimation(animation);
+                            mTvCity.setText("Bali");
                         }
                         else {
                             Log.d(TAG, "moveLeft");
