@@ -134,7 +134,11 @@ public class MainActivity extends AppCompatActivity {
                             mIvCircle0.startAnimation(scaleAnim);
 
                             mTvCity.setText("Maldivies");
-                            final Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_appear);
+
+                            Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_disappear);
+                            mTvCity.startAnimation(animation);
+
+                            animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_appear);
                             mTvCity.startAnimation(animation);
 
                         }
@@ -146,7 +150,10 @@ public class MainActivity extends AppCompatActivity {
                             scaleAnim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.scaledown_circle);
                             mIvCircle1.startAnimation(scaleAnim);
 
-                            final Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_appear);
+                            Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_disappear);
+                            mTvCity.startAnimation(animation);
+
+                            animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_appear);
                             mTvCity.startAnimation(animation);
                             mTvCity.setText("Santorini");
                         }
@@ -217,7 +224,10 @@ public class MainActivity extends AppCompatActivity {
                             scaleAnim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.scaledown_circle);
                             mIvCircle3.startAnimation(scaleAnim);
 
-                            final Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_appear);
+                            Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_disappear);
+                            mTvCity.startAnimation(animation);
+
+                            animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_appear);
                             mTvCity.startAnimation(animation);
                             mTvCity.setText("HallStatt");
                         }
@@ -251,7 +261,10 @@ public class MainActivity extends AppCompatActivity {
                             scaleAnim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.scaledown_circle);
                             mIvCircle4.startAnimation(scaleAnim);
 
-                            final Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_appear);
+                            Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_disappear);
+                            mTvCity.startAnimation(animation);
+
+                            animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_appear);
                             mTvCity.startAnimation(animation);
                             mTvCity.setText("Taiwan");
                         }

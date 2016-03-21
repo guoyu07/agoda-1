@@ -19,6 +19,7 @@
     <View
         android:layout_width="1dp"
         android:layout_height="80dp"
+        app:layout_gravity="center"
         android:background="@color/progressGrey"
         app:layout_rowSpan="2" />
 
