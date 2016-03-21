@@ -8,5 +8,6 @@
 
         <!-- Make the statusbar transparent -->
         <item name="android:windowTranslucentStatus">true</item>
+    <!--    <item name="android:statusBarColor">@android:color/transparent</item>-->
     </style>
 </resources>

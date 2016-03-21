@@ -7,7 +7,9 @@ import android.support.v13.app.FragmentPagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
@@ -42,12 +44,31 @@ public class MainActivity extends AppCompatActivity {
     public MainActivity() {
     }
 
+    public int getStatusBarHeight() {
+        int result = 0;
+        int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
+        if (resourceId > 0) {
+            result = getResources().getDimensionPixelSize(resourceId);
+        }
+        return result;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate");
 
         setContentView(R.layout.fragment_main);
+
+        /* Add the toolbar */
+        final Toolbar toolbar = (Toolbar)findViewById(R.id.toolbarInclude);
+        setSupportActionBar(toolbar);
+
+        /* Manually adjust status bar for transparency */
+    /*    getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);*/
+
+        // Set the padding to match the Status Bar height
+        toolbar.setPadding(0, getStatusBarHeight(), 0, 0);
 
         /* Inflate the view into java objects */
         mIvCircle0 = (ImageView)findViewById(R.id.circle0);
@@ -90,15 +111,6 @@ public class MainActivity extends AppCompatActivity {
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
                 /* Ignore */
             }
-
-/*
-            mFragmentList.add(new SantoriniFragment());
-            mFragmentList.add(new MaldivesFragment());
-            mFragmentList.add(new HallstattFragment());
-            mFragmentList.add(new TaiwanFragment());
-            mFragmentList.add(new BaliFragment());
-*/
-
 
             /*
                We need to establish if we are moving to the right or the left so we can scale down and up on the
@@ -168,7 +180,10 @@ public class MainActivity extends AppCompatActivity {
                             scaleAnim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.scaledown_circle);
                             mIvCircle2.startAnimation(scaleAnim);
 
-                            final Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_appear);
+                            Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_disappear);
+                            mTvCity.startAnimation(animation);
+
+                            animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_appear);
                             mTvCity.startAnimation(animation);
                             mTvCity.setText("Maldives");
                         }
@@ -183,7 +198,10 @@ public class MainActivity extends AppCompatActivity {
                             scaleAnim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.scaleup_circle);
                             mIvCircle2.startAnimation(scaleAnim);
 
-                            final Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_appear);
+                            Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_disappear);
+                            mTvCity.startAnimation(animation);
+
+                            animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_appear);
                             mTvCity.startAnimation(animation);
                             mTvCity.setText("Hallstatt");
                         }
@@ -214,7 +232,10 @@ public class MainActivity extends AppCompatActivity {
                             scaleAnim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.scaleup_circle);
                             mIvCircle3.startAnimation(scaleAnim);
 
-                            final Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_appear);
+                            Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_disappear);
+                            mTvCity.startAnimation(animation);
+
+                            animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_appear);
                             mTvCity.startAnimation(animation);
                             mTvCity.setText("Taiwan");
                         }
@@ -248,7 +269,10 @@ public class MainActivity extends AppCompatActivity {
                             mScaleCircleAnim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.scaleup_circle);
                             mIvCircle4.startAnimation(mScaleCircleAnim);
 
-                            final Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_appear);
+                            Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_disappear);
+                            mTvCity.startAnimation(animation);
+
+                            animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_appear);
                             mTvCity.startAnimation(animation);
                             mTvCity.setText("Bali");
                         }
